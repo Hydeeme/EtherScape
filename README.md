@@ -13,7 +13,7 @@ RuneScape-inspired decentralized MMORPG built on Ethereum. Phase 1 features a co
 
 **Quick Start:** 
 ```bash
-git clone https://github.com/Hydeeme/EtherScape-Phase1.git
+git clone https://github.com/Hydeeme/EtherScape.git
 cd EtherScape-Phase1
 npm install
 npx hardhat node

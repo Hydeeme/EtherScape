@@ -9,7 +9,7 @@ RuneScape-inspired decentralized MMORPG built on Ethereum. Phase 1 features a co
 
 ## 🎮 Live Demo
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Hydeeme/EtherScape-Phase1)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Hydeeme/EtherScape)
 
 **Quick Start:** 
 ```bash

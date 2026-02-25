@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherScape - Phase 1 MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌲 EtherScape MVP</h1>
+            <div id="wallet-connect">
+                <button id="connect-btn">Connect Wallet</button>
+                <span id="wallet-address"></span>
+            </div>
+        </header>
+
+        <div class="game-ui">
+            <!-- Player Stats Section -->
+            <div class="player-stats">
+                <h3>Player Stats</h3>
+                <div id="player-info">Not connected</div>
+                <div id="token-balances">
+                    <span>GOLD: 0</span>
+                </div>
+                <button id="claim-starter" style="display:none;">Claim Starter Pack</button>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <span id="skill-0">Woodcutting: Level 1</span>
+                        <button onclick="addSkillXP(0, 100)">Chop Tree (+100 XP)</button>
+                    </div>
+                    <div class="skill">
+                        <span id="skill-1">Mining: Level 1</span>
+                        <button onclick="addSkillXP(1, 100)">Mine Rock (+100 XP)</button>
+                    </div>
+                    <div class="skill">
+                        <span id="skill-2">Fishing: Level 1</span>
+                        <button onclick="addSkillXP(2, 100)">Fish Spot (+100 XP)</button>
+                    </div>
+                    <div class="skill">
+                        <span id="skill-3">Combat: Level 1</span>
+                        <button onclick="addSkillXP(3, 150)">Train Combat (+150 XP)</button>
+                    </div>
+                    <div class="skill">
+                        <span id="skill-4">Crafting: Level 1</span>
+                        <button onclick="addSkillXP(4, 120)">Craft Item (+120 XP)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketplace Section -->
+            <div class="marketplace-section">
+                <h3>Marketplace</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <span>Wood Sword - 100 GOLD</span>
+                        <button onclick="buyItem(0, 100)">Buy</button>
+                    </div>
+                    <div class="item">
+                        <span>Iron Ore - 50 GOLD</span>
+                        <button onclick="buyItem(1, 50)">Buy</button>
+                    </div>
+                    <div class="item">
+                        <span>Raw Shrimp - 25 GOLD</span>
+                        <button onclick="buyItem(2, 25)">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crafting Section -->
+            <div class="crafting-section">
+                <h3>Crafting</h3>
+                <div class="crafting-options">
+                    <button onclick="craftItem(0)">Craft Wood Sword</button>
+                    <button onclick="craftItem(1)">Smelt Iron Ore</button>
+                    <button onclick="craftItem(2)">Cook Shrimp</button>
+                </div>
+            </div>
+
+            <!-- Inventory Section -->
+            <div class="inventory-section">
+                <h3>Inventory</h3>
+                <div id="inventory-items">
+                    No items yet
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>EtherScape Phase 1 MVP - Built with Hardhat & Ethers.js</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+    <script src="web3-connect.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

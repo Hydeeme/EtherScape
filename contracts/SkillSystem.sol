@@ -3,6 +3,10 @@ pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+interface IGameToken {
+    function rewardPlayer(address player, uint256 goldAmount) external;
+}
+
 contract SkillSystem is Ownable {
     struct Skill {
         string name;
@@ -10,7 +14,7 @@ contract SkillSystem is Ownable {
         uint256 baseXP;
     }
     
-    GameToken public gameToken;
+    IGameToken public gameToken;
     
     Skill[] public skills;
     mapping(address => mapping(uint256 => uint256)) public playerSkills;
@@ -20,7 +24,7 @@ contract SkillSystem is Ownable {
     event SkillXPAdded(address player, uint256 skillId, uint256 xpAdded);
     
     constructor(address _gameToken) {
-        gameToken = GameToken(_gameToken);
+        gameToken = IGameToken(_gameToken);
         
         skills.push(Skill("Woodcutting", 99, 100));
         skills.push(Skill("Mining", 99, 100));
@@ -61,4 +65,3 @@ contract SkillSystem is Ownable {
         return skills.length;
     }
 }
-
